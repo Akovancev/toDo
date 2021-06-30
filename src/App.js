@@ -1,6 +1,8 @@
 import React from "react";
+import TodoForm from "./TodoForm";
+import TodoList from "./TodoList";
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -8,25 +10,35 @@ class App extends React.Component {
       allItems: []
     }
 
-    this.handleChange = this.handleChange.bind(this)
+    this.handleChangeForm = this.handleChangeForm.bind(this)
+    this.handleChangeList = this.handleChangeList.bind(this)
     this.addItem = this.addItem.bind(this)
   }
 
-  handleChange(e) {
+  handleChangeForm(e) {
     this.setState({
       newItem: e.target.value
     })
   }
 
+  handleChangeList(e) {
+    this.setState((prevState) => {
+      let items = [...prevState.allItems]
+      items[e.target.name].isChecked = e.target.checked
+      return {
+        allItems: items
+      }
+    })
+  }
+
   addItem(event) {
-    if (event.code == 'Enter') {
+    if (event.code === 'Enter' && this.state.newItem !== '') {
       const oldItems = this.state.allItems
       const oldItem = this.state.newItem
       this.setState({
-          newItem: '',
-          allItems: [{ name: oldItem}, ...oldItems]
+        newItem: '',
+        allItems: [{ name: oldItem, isChecked: false }, ...oldItems]
       })
-      debugger
     }
   }
 
@@ -34,20 +46,17 @@ class App extends React.Component {
     document.addEventListener('keydown', this.addItem)
   }
 
+  componentWillUnmount(event) {
+    event.preventDefault()
+    document.removeEventListener('keydown', this.addItem)
+  }
+
   render() {
     return (
       <div className='App'>
-        <input value={this.state.newItem} onChange={this.handleChange}/>
-        {this.state.allItems.map((item) => {
-          return (
-            <div>
-              {item.name}
-            </div>
-          )
-        })}
+        <TodoForm newItem={this.state.newItem} onChange={this.handleChangeForm} />
+        <TodoList allItems={this.state.allItems} onChange={this.handleChangeList} />
       </div>
     );
   }
 }
-
-export default App;
