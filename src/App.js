@@ -12,6 +12,7 @@ export default class App extends React.Component {
 
     this.handleChangeForm = this.handleChangeForm.bind(this)
     this.handleChangeList = this.handleChangeList.bind(this)
+    this.handleDeleteList = this.handleDeleteList.bind(this)
     this.addItem = this.addItem.bind(this)
   }
 
@@ -27,6 +28,14 @@ export default class App extends React.Component {
       items[e.target.name].isChecked = e.target.checked
       return {
         allItems: items
+      }
+    })
+  }
+
+  handleDeleteList(e) {
+    this.setState((prevState) => {
+      return {
+        allItems: prevState.allItems.filter((t, index) => index != e.target.name)
       }
     })
   }
@@ -55,7 +64,7 @@ export default class App extends React.Component {
     return (
       <div className='App'>
         <TodoForm newItem={this.state.newItem} onChange={this.handleChangeForm} />
-        <TodoList allItems={this.state.allItems} onChange={this.handleChangeList} />
+        <TodoList allItems={this.state.allItems} onChange={this.handleChangeList} onDelete={this.handleDeleteList} />
       </div>
     );
   }

@@ -3,7 +3,6 @@ import React from "react";
 export default class TodoList extends React.Component {
 
     render() {
-        debugger
         return (
             <div>
                 {this.props.allItems.map((item, i) => {
@@ -13,6 +12,7 @@ export default class TodoList extends React.Component {
                             <div>
                                 {item.name}
                             </div>
+                            <button name={i} onClick={this.props.onDelete}>Delete</button>
                         </div>
                     )
                 })}
