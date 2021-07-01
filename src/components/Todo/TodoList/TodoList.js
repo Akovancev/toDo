@@ -2,7 +2,6 @@ import React from "react";
 import { divStyles, textStyles, inputStyles, deleteStyles } from "./stylesList";
 
 export default class TodoList extends React.Component {
-
     render() {
         return (
             <div>
@@ -15,7 +14,7 @@ export default class TodoList extends React.Component {
                         textStyle.textDecoration = 'none'
                     }
                     return (
-                        <div style={divStyles} className="listElement" >
+                        <div key={i} style={divStyles} className="listElement" >
                             <input style={inputStyles} name={i} type="checkbox" checked={item.isChecked} onChange={this.props.onChange} />
                             <div style={textStyle} >
                                 {item.name}
