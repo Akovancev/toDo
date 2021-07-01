@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, NavLink } from "react-router-dom";
 import Todo from './components/Todo/Todo'
+import { About } from "./components/About/About";
 import './App.css'
 
 export default class App extends React.Component {
@@ -17,7 +18,7 @@ export default class App extends React.Component {
             <Todo />
           </Route>
           <Route path="/about">
-            About
+            <About />
           </Route>
           <Route path="/">
             Sign in
