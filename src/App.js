@@ -1,6 +1,7 @@
 import React from "react";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
+import './App.css'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -51,19 +52,10 @@ export default class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.addItem)
-  }
-
-  componentWillUnmount(event) {
-    event.preventDefault()
-    document.removeEventListener('keydown', this.addItem)
-  }
-
   render() {
     return (
       <div className='App'>
-        <TodoForm newItem={this.state.newItem} onChange={this.handleChangeForm} />
+        <TodoForm newItem={this.state.newItem} onChange={this.handleChangeForm} onKeyDown={this.addItem} />
         <TodoList allItems={this.state.allItems} onChange={this.handleChangeList} onDelete={this.handleDeleteList} />
       </div>
     );

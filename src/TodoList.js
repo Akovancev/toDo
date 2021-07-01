@@ -1,4 +1,5 @@
 import React from "react";
+import { divStyles, textStyles, inputStyles, deleteStyles } from "./stylesList";
 
 export default class TodoList extends React.Component {
 
@@ -6,13 +7,20 @@ export default class TodoList extends React.Component {
         return (
             <div>
                 {this.props.allItems.map((item, i) => {
+                    let textStyle = Object.assign({}, textStyles)
+                    if (item.isChecked) {
+                        textStyle.textDecoration = 'line-through'
+                    }
+                    else {
+                        textStyle.textDecoration = 'none'
+                    }
                     return (
-                        <div>
-                            <input name={i} type="checkbox" checked={item.isChecked} onChange={this.props.onChange} />
-                            <div>
+                        <div style={divStyles} >
+                            <input style={inputStyles} name={i} type="checkbox" checked={item.isChecked} onChange={this.props.onChange} />
+                            <div style={textStyle} >
                                 {item.name}
                             </div>
-                            <button name={i} onClick={this.props.onDelete}>Delete</button>
+                            <img style={deleteStyles} name={i} onClick={this.props.onDelete} src="https://www.eromatica.com/img/delete-button.svg" />
                         </div>
                     )
                 })}
