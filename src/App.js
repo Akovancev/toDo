@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Todo from './components/Todo/Todo'
 import { About } from "./components/About/About";
 import { Navigation } from "./components/Navigation/Navigation";
+import { Authorization } from "./components/Authorization/Authorization";
 import './App.css'
 
 export default class App extends React.Component {
@@ -18,7 +19,7 @@ export default class App extends React.Component {
             <About />
           </Route>
           <Route path="/">
-            Sign in
+            <Authorization />
           </Route>
         </Switch>
       </div>
