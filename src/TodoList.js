@@ -15,7 +15,7 @@ export default class TodoList extends React.Component {
                         textStyle.textDecoration = 'none'
                     }
                     return (
-                        <div style={divStyles} >
+                        <div style={divStyles} className="listElement" >
                             <input style={inputStyles} name={i} type="checkbox" checked={item.isChecked} onChange={this.props.onChange} />
                             <div style={textStyle} >
                                 {item.name}

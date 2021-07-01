@@ -9,14 +9,14 @@ export const inputStyles = {
     width: 18,
     height: 18,
     marginLeft: 10,
-    marginTop: 21
+    marginTop: 17
 }
 
 export let textStyles = {
     float: 'left',
     textDecoration: 'none',
     fontSize: 24,
-    marginTop: 15,
+    marginTop: 11,
     marginLeft: 20
 }
 
@@ -24,6 +24,6 @@ export const deleteStyles = {
     float: 'right',
     width: '25px',
     height: '25px',
-    marginTop: 10,
+    marginTop: 12,
     marginRight: 10
 }
