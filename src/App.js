@@ -1,18 +1,15 @@
 import React from "react";
-import { Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Todo from './components/Todo/Todo'
 import { About } from "./components/About/About";
+import { Navigation } from "./components/Navigation/Navigation";
 import './App.css'
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <NavLink to="/todo">Todo</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/">Sign in</NavLink>
-        </div>
+        <Navigation />
         <Switch>
           <Route path="/todo">
             <Todo />
