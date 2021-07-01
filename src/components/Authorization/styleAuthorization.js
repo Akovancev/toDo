@@ -29,3 +29,7 @@ export const pStyle = {
     textAlign: 'center',
     fontSize: 20    
 }
+
+export const linkStyle = {
+    textDecoration: 'none'
+}
