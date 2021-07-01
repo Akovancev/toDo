@@ -8,8 +8,10 @@ class ContextProvider extends React.Component {
     }
 
     Auth = () => {
-        this.setState( {
-            isAuth: true
+        this.setState((prevState) => {
+            return {
+                isAuth: prevState.isAuth === true ? false : true
+            }
         })
     }
 
