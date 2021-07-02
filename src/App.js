@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Todo from './components/Todo/Todo'
 import { About } from "./components/About/About";
 import { Navigation } from "./components/Navigation/Navigation";
-import { Authorization } from "./components/Authorization/Authorization";
+import { Authentication } from "./components/Authentication/Authentication";
 import { PrivateRoute } from "./PrivateRoute";
 import { Message } from "./components/Message/Message";
 import './App.css'
@@ -24,7 +24,7 @@ export default class App extends React.Component {
             <Message />
           </Route>
           <Route path="/">
-            <Authorization />
+            <Authentication />
           </Route>
         </Switch>
       </div>

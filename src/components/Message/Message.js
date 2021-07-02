@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { linkStyle, buttonStyles } from '../Authorization/styleAuthorization';
+import { linkStyle, buttonStyles } from '../Authentication/styleAuthentication';
 
 const styles = {
     textAlign: 'center'

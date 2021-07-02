@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Consumer } from '../../Context';
-import { divStyles, inputStyles, buttonStyles, pStyle, linkStyle } from './styleAuthorization';
+import { divStyles, inputStyles, buttonStyles, pStyle, linkStyle } from './styleAuthentication';
 
-export const Authorization = () => {
+export const Authentication = () => {
     return (
         <Consumer>
             {context => (
