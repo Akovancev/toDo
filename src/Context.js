@@ -1,6 +1,6 @@
 import React from 'react'
 
-const { Provider, Consumer} = React.createContext()
+const Context = React.createContext()
 
 class ContextProvider extends React.Component {
     state = {
@@ -17,12 +17,13 @@ class ContextProvider extends React.Component {
 
     render() {
         return (
-            <Provider value={{ isAuth: this.state.isAuth, Auth: this.Auth }}>
+            <Context.Provider value={{ isAuth: this.state.isAuth, Auth: this.Auth }}>
                 {this.props.children}
-            </Provider>
+            </Context.Provider>
         )
     }
 }
 
+let Consumer = Context.Consumer
 
-export { ContextProvider, Consumer };
+export { ContextProvider,  Consumer, Context };

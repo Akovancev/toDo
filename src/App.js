@@ -4,6 +4,8 @@ import Todo from './components/Todo/Todo'
 import { About } from "./components/About/About";
 import { Navigation } from "./components/Navigation/Navigation";
 import { Authorization } from "./components/Authorization/Authorization";
+import { PrivateRoute } from "./PrivateRoute";
+import { Message } from "./components/Message/Message";
 import './App.css'
 
 export default class App extends React.Component {
@@ -12,11 +14,14 @@ export default class App extends React.Component {
       <div>
         <Navigation />
         <Switch>
-          <Route path="/todo">
+          <PrivateRoute path="/todo">
             <Todo />
-          </Route>
+          </PrivateRoute>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/message">
+            <Message />
           </Route>
           <Route path="/">
             <Authorization />

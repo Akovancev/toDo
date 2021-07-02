@@ -2,7 +2,8 @@ export const divStyles = {
     height: 80,
     width: 600,
     margin: '0 auto',
-    textAlign: 'center'
+    textAlign: 'center',
+    borderBottom: '2px solid grey'
 }
 
 export const navStyles = {
