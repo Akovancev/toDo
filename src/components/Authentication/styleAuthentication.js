@@ -30,6 +30,6 @@ export const pStyles = {
     fontSize: 20    
 }
 
-export const linkStyle = {
+export const linkStyles = {
     textDecoration: 'none'
 }

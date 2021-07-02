@@ -5,16 +5,12 @@ import {
     divBoxStyles,
     inputBoxStyles,
     pBoxStyles,
-    textareaStyles
+    textareaStyles,
+    errorStyles
 }
-    from "./stylesAuthorization";
+from "./stylesAuthorization";
 
 export const Authorization = () => {
-    let errorStyle = Object.assign({}, pStyles);
-    errorStyle.fontSize = 15
-    errorStyle.color = 'red'
-    errorStyle.clear = 'both'
-    errorStyle.marginBottom = 10
     const formik = useFormik(
         {
             initialValues: {
@@ -46,7 +42,7 @@ export const Authorization = () => {
                     placeholder="Name"
                 />
                 {formik.touched.name && formik.errors.name ? (
-                    <div style={errorStyle}>{formik.errors.name}</div>
+                    <div style={errorStyles}>{formik.errors.name}</div>
                 ) : null}
                 <input
                     id="email"
@@ -59,7 +55,7 @@ export const Authorization = () => {
                     placeholder="Email"
                 />
                 {formik.touched.email && formik.errors.email ? (
-                    <div style={errorStyle}>{formik.errors.email}</div>
+                    <div style={errorStyles}>{formik.errors.email}</div>
                 ) : null}
                 <input
                     id="phone"
@@ -72,7 +68,7 @@ export const Authorization = () => {
                     placeholder="Phone number"
                 />
                 {formik.touched.phone && formik.errors.phone ? (
-                    <div style={errorStyle}>{formik.errors.phone}</div>
+                    <div style={errorStyles}>{formik.errors.phone}</div>
                 ) : null}
                 {/* --------------------------------------------------------- */}
                 <div style={divBoxStyles} >
@@ -100,7 +96,7 @@ export const Authorization = () => {
                     <p style={pBoxStyles} >Female</p>
                 </div>
                 {formik.touched.gender && formik.errors.gender ? (
-                    <div style={errorStyle}>{formik.errors.gender}</div>
+                    <div style={errorStyles}>{formik.errors.gender}</div>
                 ) : null}
                 {/* --------------------------------------------------------- */}
                 <div style={divBoxStyles} >
@@ -128,7 +124,7 @@ export const Authorization = () => {
                     <p style={pBoxStyles} >Facebook</p>
                 </div>
                 {formik.touched.netWorks && formik.errors.netWorks ? (
-                    <div style={errorStyle}>{formik.errors.netWorks}</div>
+                    <div style={errorStyles}>{formik.errors.netWorks}</div>
                 ) : null}
                 <textarea
                     id="message"
@@ -141,7 +137,7 @@ export const Authorization = () => {
                     style={textareaStyles}
                 />
                 {formik.touched.message && formik.errors.message ? (
-                    <div style={errorStyle}>{formik.errors.message}</div>
+                    <div style={errorStyles}>{formik.errors.message}</div>
                 ) : null}
                 {/* --------------------------------------------------------- */}
                 <button type="submit" style={buttonStyles}>Sign up</button>

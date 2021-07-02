@@ -29,3 +29,12 @@ export const textareaStyles = {
     padding: 10,
     outline: 'none'
 }
+
+
+export const errorStyles = {
+    textAlign: 'center',
+    fontSize: 15,
+    color: 'red',
+    clear: 'both',
+    marginBottom: 10    
+}
