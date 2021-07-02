@@ -25,7 +25,7 @@ export const buttonStyles = {
     color: 'white'
 }
 
-export const pStyle = {
+export const pStyles = {
     textAlign: 'center',
     fontSize: 20    
 }

@@ -12,5 +12,5 @@ export const navStyles = {
     color: 'black',
     fontSize: 24,
     float: 'left',
-    width: '33%'
+    width: '25%'
 }
