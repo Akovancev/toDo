@@ -8,7 +8,7 @@ export const validate = values => {
         errors.name = 'Must be 16 characters or less'
     }
     else if (!/^[А-Я][А-Яа-я\s]+$/.test(values.name)) {
-        errors.name = 'Use only Cyrillic characters'
+        errors.name = 'Use only Cyrillic characters and start with a capital letter'
     }
 
     if (!values.email) {

@@ -6,7 +6,8 @@ export const divStyles = {
 
 export const inputStyles = {
     display: 'block',
-    margin: '15px auto',
+    margin: '0px auto',
+    marginTop: 15,
     borderRadius: 20,
     outline: 'none',
     paddingLeft: 10,
@@ -22,7 +23,8 @@ export const buttonStyles = {
     height: 36,
     textAlign: 'center',
     backgroundColor: 'rgb(115, 128, 255)',
-    color: 'white'
+    color: 'white',
+    outline: 'none'
 }
 
 export const pStyles = {

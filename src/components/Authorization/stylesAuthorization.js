@@ -1,7 +1,8 @@
 export const divBoxStyles = {
     margin: '0 auto',
     width: 200,
-    height: 30
+    height: 30,
+    marginTop: 10
 }
 
 export const inputBoxStyles = {
@@ -36,5 +37,6 @@ export const errorStyles = {
     fontSize: 15,
     color: 'red',
     clear: 'both',
-    marginBottom: 10    
+    marginBottom: 10,
+    marginTop: 3    
 }
