@@ -4,10 +4,10 @@ import { divStyles, navStyles} from "./styles";
 export const Navigation = () => {
     return (
         <div style={divStyles}>
-                <NavLink style={navStyles} to="/">Sign in</NavLink>
-                <NavLink style={navStyles} to="/sign-up">Sign up</NavLink>
-                <NavLink style={navStyles} to="/todo">Todo</NavLink>
-                <NavLink style={navStyles} to="/about">About</NavLink>
+            <NavLink style={navStyles} to="/">Sign in</NavLink>
+            <NavLink style={navStyles} to="/sign-up">Sign up</NavLink>
+            <NavLink style={navStyles} to="/todo">Todo</NavLink>
+            <NavLink style={navStyles} to="/about">About</NavLink>
         </div >
     );
 }

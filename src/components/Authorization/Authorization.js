@@ -132,9 +132,11 @@ export const Authorization = () => {
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.message}
-                    style={inputStyles}
+                    style={{
+                        ...inputStyles,
+                        ...textareaStyles
+                    }}
                     placeholder="Enter your message..."
-                    style={textareaStyles}
                 />
                 {formik.touched.message && formik.errors.message ? (
                     <div style={errorStyles}>{formik.errors.message}</div>

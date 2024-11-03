@@ -18,7 +18,7 @@ export const validate = values => {
         errors.email = 'Invalid email address'
     }
 
-    if (!/^(\+7|8)[\- ]?\d{3}[\- ]?\d{3}[\- ]?\d{2}[\- ]?\d{2}$/.test(values.phone) && values.phone) {
+    if (!/^(\+7|8)[- ]?\d{3}[- ]?\d{3}[- ]?\d{2}[- ]?\d{2}$/.test(values.phone) && values.phone) {
         errors.phone = 'Invalid phone number'
     }
 

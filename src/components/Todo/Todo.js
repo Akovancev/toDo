@@ -35,7 +35,7 @@ export default class Todo extends React.Component {
   handleDeleteList(e) {
     this.setState((prevState) => {
       return {
-        allItems: prevState.allItems.filter((t, index) => index != e.target.name)
+        allItems: prevState.allItems.filter((_, index) => index !== e.target.name)
       }
     })
   }

@@ -19,7 +19,7 @@ export default class TodoList extends React.Component {
                             <div style={textStyle} >
                                 {item.name}
                             </div>
-                            <img style={deleteStyles} name={i} onClick={this.props.onDelete} src="https://www.eromatica.com/img/delete-button.svg" />
+                            <img style={deleteStyles} name={i} onClick={this.props.onDelete} src="https://www.eromatica.com/img/delete-button.svg" alt="" />
                         </div>
                     )
                 })}
